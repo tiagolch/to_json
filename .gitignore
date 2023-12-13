@@ -1,0 +1,40 @@
+# Arquivos temporários
+*.pyc
+__pycache__/
+
+# Ambientes virtuais
+venv/
+env/
+.venv/
+
+# Arquivos de configuração
+*.pyo
+*.pyc
+*.pyd
+*.db
+*.sqlite
+*.log
+
+# Arquivos de saída de IDEs
+.idea/
+.vscode/
+
+# Arquivos de compilação
+*.pyc
+*.pyo
+*.pyd
+
+# Cache e diretórios de compilação
+__pycache__/
+.pytest_cache/
+pytests/
+
+# Arquivos de ambiente
+.env
+.env.local
+.env.*.local
+
+# Outros
+db.sqlite3
+media/
+staticfiles/
