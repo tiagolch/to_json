@@ -42,11 +42,12 @@ def index():
 def download(nome_arquivo):
     caminho_arquivo = os.path.join(os.getcwd(), nome_arquivo)
     try:
-        resposta = send_file(caminho_arquivo, as_attachment=True)
-        excluir_arquivo(caminho_arquivo)  
+        if caminho_arquivo:
+            resposta = send_file(caminho_arquivo, as_attachment=True)
+            excluir_arquivo(caminho_arquivo)  
         return resposta
     except Exception as e:
-        return str(e)
+        return str(f'O arquivo já foi baixado, tente criar novamente. {e}')
 
 if __name__ == '__main__':
     app.run(debug=True, port=8000)
